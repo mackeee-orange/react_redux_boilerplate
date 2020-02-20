@@ -9,15 +9,14 @@ const DEFAULT_STATE = {
   ...new Account({}),
   authToken: '',
   isLoggedIn: false,
-  isLoaded: false,
 }
 
 export default (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_ACCOUNT:
-      return { ...state, ...action.payload, isLoaded: false }
+      return { ...state, ...action.payload }
     case SIGN_IN_ACCOUNT:
-      return { ...state, ...action.payload, isLoaded: false }
+      return { ...state, ...action.payload }
     case SIGN_OUT:
       return DEFAULT_STATE
     default:
