@@ -40,7 +40,7 @@ class MyPage extends Component {
 
 const mapStateToProps = ({ app, account }) => ({
   isLoading: app.isLoading,
-  account: account,
+  account: account.me,
 })
 
 const mapDispatchToProps = dispatch => ({

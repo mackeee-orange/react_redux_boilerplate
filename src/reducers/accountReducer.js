@@ -6,7 +6,7 @@ import {
 import Account from '../models/account'
 
 const DEFAULT_STATE = {
-  ...new Account({}),
+  me: new Account({}),
   authToken: '',
   isLoggedIn: false,
 }
@@ -14,9 +14,9 @@ const DEFAULT_STATE = {
 export default (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_ACCOUNT:
-      return { ...state, ...action.payload }
+      return { ...state, me: action.payload }
     case SIGN_IN_ACCOUNT:
-      return { ...state, ...action.payload }
+      return { ...state, me: action.payload }
     case SIGN_OUT:
       return DEFAULT_STATE
     default:

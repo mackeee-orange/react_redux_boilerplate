@@ -45,7 +45,7 @@ class MemberPageFrame extends React.Component {
 
 const mapStateToProps = ({ app, account, nursery }) => ({
   app,
-  account: account,
+  account: account.me,
 })
 
 const mapDispatchToProps = dispatch => ({
