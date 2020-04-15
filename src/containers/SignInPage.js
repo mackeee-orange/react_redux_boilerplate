@@ -18,6 +18,8 @@ class SignInPage extends Component {
     })
   }
 
+
+
   componentDidMount() {
     this.props.setPageTitle('Minarva | Login')
   }

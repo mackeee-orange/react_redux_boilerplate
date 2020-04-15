@@ -4,7 +4,7 @@ switch (process.env.REACT_APP_ENV) {
     host = 'http://localhost:3000'
     break
   case 'dev':
-    host = 'https://dev.example.com'
+    host = 'https://682d0bdc-1f98-4c73-9b5a-d9cb31eea81b.mock.pstmn.io'
     break
   case 'stg':
     host = 'https://staging.example.com'
@@ -13,7 +13,7 @@ switch (process.env.REACT_APP_ENV) {
     host = 'https://example.com'
     break
   default:
-    host = 'https://uuid.mock.pstmn.io'
+    host = 'https://682d0bdc-1f98-4c73-9b5a-d9cb31eea81b.mock.pstmn.io'
     break
 }
 

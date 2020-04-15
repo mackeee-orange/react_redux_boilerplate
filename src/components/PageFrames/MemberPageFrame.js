@@ -7,19 +7,12 @@ import { toggleMenu } from '../../actions/apps'
 import { fetchCurrentAccount, selfSignOut } from '../../actions/accounts'
 import SideBar from '../../components/Layouts/SideBar'
 import styles from './index.module.scss'
-import EventListener from 'react-event-listener'
 
 const { Content } = Layout
 
 class MemberPageFrame extends React.Component {
   componentDidMount() {
     this.props.fetchProfile()
-    this.handleResize()
-  }
-
-  handleResize = () => {
-    const { openMenu, closeMenu } = this.props
-    window.innerWidth >= 768 ? openMenu() : closeMenu()
   }
 
   render() {
@@ -27,7 +20,6 @@ class MemberPageFrame extends React.Component {
     return (
       <Layout className={styles.memberPageFrame}>
         <SideBar isMenuCollapsed={app.isMenuCollapsed} />
-        <EventListener target="window" onResize={this.handleResize} />
         <Layout>
           <Header
             app={app}
